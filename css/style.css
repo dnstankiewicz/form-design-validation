@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.section-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 10rem;
+}
+
+.content-section__header {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bg-questionMark.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.form-container {
+    max-width: 85rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 1.9rem 0.5rem rgba(0, 0, 0, 0.19);
+}
+
+.form-container__description {
+    height: 100%;
+    padding: 2.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description__header {
+    padding-bottom: 2.4rem!important;
+}
+
+.description__social-icons {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+}
+
+.description__social-icon {
+    padding: 1rem;
+    font-size: 2rem;
+    color: #27AE60;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.description__social-icon:hover {
+    transform: scale(1.8);
+}
+
+.form-container__form {
+    padding: 2.5rem 4rem;
+}
+
+.content-section__header {
+    font-size: 1.8rem;
+    position: relative;
+    padding: 0 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.form__header::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 0.3rem;
+    width: 20%;
+    border-radius: 0.2rem;
+    background-color: #2ECC71;
+}
+
+.form__field {
+    font-size: 1.2rem;
+    width: 100%;
+    border: 2px solid rgba(0,0,0,0);
+    outline: none;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 0.5rem 1rem;
+    margin-bottom: 2.2rem;
+    transition: background-color .3s;
+}
+
+.form__field:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.form__field:focus {
+    border: 0.2rem solid rgba(46, 204, 113,0.4);
+}
+
+.form__field:focus::placeholder {
+    color: transparent;
+}
+
+.form__message {
+    min-height: 15rem;
+}
+
+.btn {
+    font-size: 1.6rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #2ECC71;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.btn:hover {
+    background-color: #27AE60;
+}
+
+/* Error msg styles */
+
+.error-msg {
+    margin: 2rem 0;
+    padding: 0;
+    background-color: #FE8B8E;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    transition: all .5s ease;
+}
+
+.error-msg--visible {
+    padding: 1.2rem;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 880px){
+	.form-container{
+        grid-template-columns: 1fr;
+	}
+	.form-container__description{
+        display: none;
+	}
+}
+
+
