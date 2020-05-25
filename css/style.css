@@ -173,13 +173,21 @@ body {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 880px){
+@media screen and (max-width: 880px){  
+    .section-content {
+        padding: 2rem;
+    }
+
 	.form-container{
         grid-template-columns: 1fr;
 	}
 	.form-container__description{
         display: none;
-	}
+    }
+    
+    .form__field {
+        font-size: 1.1rem;
+    }
 }
 
 
