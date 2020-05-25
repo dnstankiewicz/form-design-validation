@@ -1,10 +1,4 @@
 
-const btn = document.querySelector(".btn-form")
-btn.addEventListener("click",function(e){
-    e.preventDefault();
-    validation();
-})
-
 function validation(){
 
     const name = document.getElementById("name").value;
